@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h1>Javascript function</h1>
+    <button onclick="f1()">Call function</button>
+    <script>
+        function f1(){
+            alert('Hello I am a simple function');
+        }   
+
+        function add()
+        {
+            numOne=parseInt(document.getElementById("first").value);
+            numTwo=parseInt(document.getElementById("second").value);
+            sum = numOne + numTwo;
+            document.getElementById("answer").value = sum;
+        }
+    </script>
+
+    <p> Enter the First Number: <input id="first"></p>
+    <p>Enter the secondf Number: <input id="second"></p>
+    <button onclick="add()">Add</button>
+    <p>Sum = <input id="answer"></p>
+</body>
+</html>

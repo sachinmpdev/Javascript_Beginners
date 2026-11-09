@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+    <script>
+        // var myvar = 100;
+        // function whoIsThis(){
+        //     var myvar = 200;
+        //     alert("myVar = " +myvar); 
+        //     alert("this.myVar= " +this.myvar);
+        // }         
+        // whoIsThis(); //window.WhoIsThis() also works the same way
+
+
+        // var obj = new whoIsThis();
+        // alert(obj.myvar)
+
+
+        // // Example -2
+
+        // var myvar1 = 1000;
+        // var obj = {
+        //     myvar1 : 3000,
+        //     whoIsThis:function(){
+        //         var myvar1 = 2000;
+        //         alert(myvar1);//2000
+        //         alert(this.myvar1);//3000
+        //     }
+        // };
+        // obj.whoIsThis();
+
+    // call() adn apply(0)
+        var demo = 100; //window object 
+        function getData(){
+            alert(this.demo);
+        }
+
+        // demo and getData is the obj1's property
+        var obj1 = {demo:200, getdata :getData};
+        var obj2 = {demo:300, getdata :getData};
+        getData(); // this will point to window object so it will show 100
+        
+        getData.call(obj1); //It will point to obj1  so it will show 200
+        getData.apply(obj2); //This will point to obj2 so it will show 300
+        obj1.getdata.call(window); // This is will point to window object so it will show 100       
+    </script>
+</body>
+</html>

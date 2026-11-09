@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest parameter</title>
+</head>
+<body>
+    <script>
+    function test(a, ...someMore){
+        document.write("First parameter : "+a);
+        document.write("<br/>More parameter :"+someMore);
+    }
+    test(1,2,4,6,9,11,20,34,56);
+
+    function sortValues(...theArgs){
+        // Using array method on rest params
+        let sortedValue = theArgs.sort();
+        return sortedValue;
+    }
+    console.log(sortValues(8,7,5,3,1,21,44,10));
+    </script>
+</body>
+</html>

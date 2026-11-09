@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+        var materials = [
+            'Hydrogen',
+            'Helium',
+            'Lithium',
+            'Beryllium'
+        ];
+
+        materials.map(function(materials){
+            return materials.length;
+        });
+
+        materials.map((materials)=>{
+            return materials.length;
+        });
+
+        materials.map(materials => materials.length);
+    </script>
+
+
+    <script>
+        function myFun(){
+            sum= 5+5;
+            document.write("The value of sum"+sum);
+        }
+
+        function abc(x,y,z){
+            console.log(x+y+z);
+        }
+        abc(10,20,30);
+
+        let result = (x,y,z) => {return x + y + z };
+        alert(result(4,5,6));
+    </script>
+</body>
+</html>

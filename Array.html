@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h3>Javascript array</h3>
+    <script>
+        let name = [];
+        console.log(name); //[]
+
+        let courses = ["HTML" , "CSS", "Javascript", "PHP", "Vue.js"];
+        console.log(courses);
+
+
+        // Creating array constructor
+        let subject = new Array();
+
+        // Add element in the array
+        subject.push("Maths");
+        subject.push("Science");
+        subject.unshift("Social Science");  // index 0
+
+        console.log(subject);
+        let sub_name = new Array("Java", "Advanced Java", "Spring boot");
+        console.log(sub_name);
+
+        // initializing Array while declaring 
+        let arr = new Array(3);
+        arr[0] = 100;
+        arr[1] = 200;
+        arr[2] = 300;
+        console.log(arr); console.log(arr[1]);
+
+        // replacing exsting value
+        arr[0] = "Bootstrap";
+        console.log(arr);
+
+        // remove elements from an array using pop() and shift() methods
+        let courses1 = ["HTML" , "CSS", "Javascript", "PHP", "Vue.js"];
+        console.log("original array : " + courses);
+        
+        let lastelement = courses.pop();
+        console.log("lastelement : "+ lastelement)
+
+        let firstelement = courses.shift();
+        console.log("First element removed :" + firstelement);
+
+        courses.splice(1 , 2); //Removing two element starting from second position
+        console.log("After removing 2 elements starting from index 1 :"+ courses)
+
+        // increase or decrease array size
+        let users = ["A", "B", "C", "D","X","Y","Z"]; //length is 7
+        console.log(users.length);
+
+        users.length = 10; //increase  the array size by setting the 
+
+        console.log("After increasering the length of the array "+users);
+
+        users.length = 2; //decreasing the array size by setting the lengh property
+        console.log("after decreasing the length of the array "+users);
+
+        // join method -helps  to join the two rray as a string
+        console.log("join method")
+        var fruits=["apple", "Banana", "Cherry"];
+        console.log("afte join "+fruits.join('|'));
+        var colors=['red','blue','green'];
+        // concate method
+        let newArray = fruits.concat(colors);
+        console.log(newArray);
+
+    </script>
+</body>
+</html>

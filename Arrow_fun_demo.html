@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function for sum</title>
+</head>
+<body>
+
+    <h2>Arrow Function Example</h2>
+    <script>
+        // Arrow function for sum
+        let add = (a,b) => {return a+b};
+
+        let sum = add(10,20)
+        document.write("Sum of 10 and 20 is:" + sum);
+
+        // Arrow function - without return
+        let show = () => "Hello from arrow function";
+        // Calling function
+        document.write("<br/>"+ show());
+
+        // Arrow function with default params
+        let newAdd = (a,b=1) => a+b;
+
+        let newSum = newAdd(10);
+        document.write("<br/> Result is: " +newSum);
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Class and Objects</title>
+</head>
+<body>
+    <h1>Javascript classes and Objects</h1>
+    <script>
+            class Student{
+                name;
+                age;
+                static collage = 'COEP';
+
+                // Class Constructor
+                constructor(name,age){
+                    this.name = name;
+                    this.age = age;
+                }
+                getStudentInfo(){
+                    console.log(`Name : ${this.name} Age:${this.age} collage: ${Student.collage}` );
+                }
+            }
+            let stu1 = new Student();
+            stu1.name = "Sachin"; stu1.age=20;
+
+            let stu2 = new Student();
+            stu2.name="Sanjana" ; stu2.age=18;
+
+            stu1.getStudentInfo();
+            stu2.getStudentInfo();
+
+            // Object creating by constructor for another object
+            let stu3 = new Student("James",18);
+            stu3.getStudentInfo();
+
+            let stu4 = new Student("Tom", 20);
+            stu4.getStudentInfo();
+    </script>
+</body>
+</html>

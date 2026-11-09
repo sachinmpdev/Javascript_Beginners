@@ -1,0 +1,1 @@
+alert('Separate javascript code !!!!')

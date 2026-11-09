@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript argument object</title>
+</head>
+<body>
+        <h2>Javascript argument object</h2>
+        <p id="p1"></p>
+        <script>
+            function getNumber(){
+                return 10;
+            }
+            let result = getNumber();
+            document.getElementById("p1").innerHTML=result;
+        </script>
+
+        <h3>Default parameter example</h3>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        
+        <script>
+            //Default function parameter 
+            function add(a=20,b=40){
+                return a+b;
+            }   
+            let data = add(100,200);
+            document.getElementById("p3").innerHTML = data;
+            document.getElementById("p2").innerHTML = add() + "<br>" + add(5) + "<br>" + add(undefined,6);
+
+            
+        </script>
+</body>
+</html>

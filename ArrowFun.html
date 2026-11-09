@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <p>Click below button</p>
+    <button id="button1">Click Me!</button>
+    <p id="sample"></p>
+    <script>
+        var example;
+        example = () =>{ document.getElementById("sample").innerHTML += "You clicked the button"; }
+        document.getElementById("button1").addEventListener("click",example);
+    </script>
+</body>
+</html>
